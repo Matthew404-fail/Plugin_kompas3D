@@ -76,10 +76,10 @@
 
             foreach (var item in ParametersDict)
             {
-                var _key = item.Key;
-                var _value = item.Value;
+                var key = item.Key;
+                var value = item.Value;
 
-                parametersCurrentValues.Add(_key, _value.Current);
+                parametersCurrentValues.Add(key, value.Current);
             }
 
             return parametersCurrentValues;
@@ -159,24 +159,6 @@
                             Current / 2);
                     break;
 
-                case ParametersEnum.PeepholeHeight:
-                    break;
-
-                case ParametersEnum.PeepholeWidth:
-                    break;
-
-                case ParametersEnum.PeepholeDiameter:
-                    break;
-
-                case ParametersEnum.HandleHeight:
-                    break;
-
-                case ParametersEnum.HandleWidth:
-                    break;
-
-                case ParametersEnum.HandleBaseDiameter:
-                    break;
-
                 case ParametersEnum.HandleDiameter:
                     ParametersDict[ParametersEnum.HandleBaseThickness].Current =
                         (parameter.Current / _handleBaseThicknessOffset) +
@@ -193,9 +175,13 @@
                     break;
 
                 case ParametersEnum.HandleBaseThickness:
-                    break;
-
                 case ParametersEnum.HandleThickness:
+                case ParametersEnum.PeepholeHeight:
+                case ParametersEnum.PeepholeWidth:
+                case ParametersEnum.PeepholeDiameter:
+                case ParametersEnum.HandleHeight:
+                case ParametersEnum.HandleWidth:
+                case ParametersEnum.HandleBaseDiameter:
                     break;
 
                 default:

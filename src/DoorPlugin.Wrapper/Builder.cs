@@ -149,6 +149,7 @@
             СreateCutExtrusionThroughAll(sketch, false);
         }
 
+        // TODO: вынести в Connector методы, которые связаны с API Компаса
         /// <summary>
         /// Создает смещенную плоскость относительно другой плоскости.
         /// </summary>

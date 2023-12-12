@@ -7,6 +7,7 @@
     [TestFixture]
     public class ParametersTests
     {
+        // TODO: Добавить описания для тестов
         [TestCase(
             ParametersEnum.HandleThickness,
             123,
@@ -28,7 +29,7 @@
         {
             // Arrange
             var parameters = new Parameters();
-            Parameter parameter = new Parameter(
+            var parameter = new Parameter(
                 currentValue,
                 minValue,
                 maxValue);
@@ -63,7 +64,7 @@
         {
             // Arrange
             var parameters = new Parameters();
-            Parameter parameter = new Parameter(
+            var parameter = new Parameter(
                 currentValue,
                 minValue,
                 maxValue);
@@ -160,7 +161,7 @@
         {
             // Arrange
             var parameters = new Parameters();
-            Parameter parameter = new Parameter(
+            var parameter = new Parameter(
                 currentValue,
                 minValue,
                 maxValue);
@@ -235,7 +236,7 @@
         {
             // Arrange
             var parameters = new Parameters();
-            Parameter parameter = new Parameter(
+            var parameter = new Parameter(
                 currentValue,
                 minValue,
                 maxValue);
@@ -254,7 +255,7 @@
         {
             // Arrange
             var parameters = new Parameters();
-            Parameter parameter = new Parameter(
+            var parameter = new Parameter(
                 currentValue,
                 minValue,
                 maxValue);

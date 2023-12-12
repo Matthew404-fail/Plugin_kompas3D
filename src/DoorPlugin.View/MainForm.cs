@@ -141,6 +141,7 @@
         {
             foreach (var item in _parameters.ParametersDict)
             {
+                // TODO: key и value
                 var _key = item.Key;
                 var _value = item.Value;
 
