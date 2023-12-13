@@ -7,6 +7,7 @@
     [TestFixture]
     public class ParameterTests
     {
+        [Description("Положительный тест конструктора Parameter.")]
         [TestCase(4, 14, 1)]
         [TestCase(700, 10000, 699)]
         [TestCase(23, 67, 18)]
@@ -19,11 +20,12 @@
             var parameter = new Parameter(currentValue, minValue, maxValue);
 
             // Assert
-            Assert.AreEqual(currentValue,parameter.Current);
+            Assert.AreEqual(currentValue,parameter.CurrentValue);
             Assert.AreEqual(maxValue, parameter.Max);
             Assert.AreEqual(minValue, parameter.Min);
         }
 
+        [Description("Положительный тест задания значений Parameter.")]
         [TestCase(4, 14, 1)]
         [TestCase(700, 10000, 699)]
         [TestCase(23, 67, 18)]
@@ -36,16 +38,17 @@
             var parameter = new Parameter();
 
             // Act
-            parameter.Current = currentValue;
+            parameter.CurrentValue = currentValue;
             parameter.Max = maxValue;
             parameter.Min = minValue;
 
             // Assert
-            Assert.AreEqual(currentValue,parameter.Current);
+            Assert.AreEqual(currentValue,parameter.CurrentValue);
             Assert.AreEqual(maxValue, parameter.Max);
             Assert.AreEqual(minValue, parameter.Min);
         }
 
+        [Description("Отрицательный тест задания значений Parameter.")]
         [TestCase(5, 3, 1)]
         [TestCase(700, 10000, 20000)]
         [TestCase(23, 67, -18)]

@@ -79,7 +79,7 @@
                 var key = item.Key;
                 var value = item.Value;
 
-                parametersCurrentValues.Add(key, value.Current);
+                parametersCurrentValues.Add(key, value.CurrentValue);
             }
 
             return parametersCurrentValues;
@@ -97,7 +97,7 @@
             double value)
         {
             Validator.ValidateParameter(value, parameter.Min, parameter.Max);
-            ParametersDict[parameterType].Current = value;
+            ParametersDict[parameterType].CurrentValue = value;
             ChangeParametersRangeValues(parameterType, parameter);
         }
 
@@ -116,62 +116,62 @@
             {
                 case ParametersEnum.DoorHeight:
                     ParametersDict[ParametersEnum.PeepholeHeight].
-                        Min = parameter.Current * _peepholeHeightMinOffset;
+                        Min = parameter.CurrentValue * _peepholeHeightMinOffset;
                     ParametersDict[ParametersEnum.PeepholeHeight].
-                        Max = parameter.Current - _peepholeHeightMaxOffset;
+                        Max = parameter.CurrentValue - _peepholeHeightMaxOffset;
 
                     ParametersDict[ParametersEnum.HandleHeight].
-                        Current = parameter.Current / _handleHeightOffset;
+                        CurrentValue = parameter.CurrentValue / _handleHeightOffset;
                     ParametersDict[ParametersEnum.HandleHeight].
-                        Min = parameter.Current / _handleHeightOffset;
+                        Min = parameter.CurrentValue / _handleHeightOffset;
                     ParametersDict[ParametersEnum.HandleHeight].
-                        Max = parameter.Current / _handleHeightOffset;
+                        Max = parameter.CurrentValue / _handleHeightOffset;
                     break;
 
                 case ParametersEnum.DoorWidth:
                     ParametersDict[ParametersEnum.PeepholeWidth].
-                        Current = parameter.Current / _peepholeWidthOffset;
+                        CurrentValue = parameter.CurrentValue / _peepholeWidthOffset;
                     ParametersDict[ParametersEnum.PeepholeWidth].
-                        Min = parameter.Current / _peepholeWidthOffset;
+                        Min = parameter.CurrentValue / _peepholeWidthOffset;
                     ParametersDict[ParametersEnum.PeepholeWidth].
-                        Max = parameter.Current / _peepholeWidthOffset;
+                        Max = parameter.CurrentValue / _peepholeWidthOffset;
 
                     ParametersDict[ParametersEnum.HandleWidth].
-                        Current = parameter.Current * _handleWidthMultiplier;
+                        CurrentValue = parameter.CurrentValue * _handleWidthMultiplier;
                     ParametersDict[ParametersEnum.HandleWidth].
-                        Min = parameter.Current * _handleWidthMultiplier;
+                        Min = parameter.CurrentValue * _handleWidthMultiplier;
                     ParametersDict[ParametersEnum.HandleWidth].
-                        Max = parameter.Current * _handleWidthMultiplier;
+                        Max = parameter.CurrentValue * _handleWidthMultiplier;
                     break;
 
                 case ParametersEnum.DoorThickness:
-                    ParametersDict[ParametersEnum.HandleBaseThickness].Current =
-                        (parameter.Current / _handleBaseThicknessOffset) +
+                    ParametersDict[ParametersEnum.HandleBaseThickness].CurrentValue =
+                        (parameter.CurrentValue / _handleBaseThicknessOffset) +
                         (ParametersDict[ParametersEnum.HandleDiameter].
-                            Current / 2);
+                            CurrentValue / 2);
                     ParametersDict[ParametersEnum.HandleBaseThickness].Min =
-                        (parameter.Current / _handleBaseThicknessOffset) +
+                        (parameter.CurrentValue / _handleBaseThicknessOffset) +
                         (ParametersDict[ParametersEnum.HandleDiameter].
-                            Current / 2);
+                            CurrentValue / 2);
                     ParametersDict[ParametersEnum.HandleBaseThickness].Max =
-                        (parameter.Current / _handleBaseThicknessOffset) +
+                        (parameter.CurrentValue / _handleBaseThicknessOffset) +
                         (ParametersDict[ParametersEnum.HandleDiameter].
-                            Current / 2);
+                            CurrentValue / 2);
                     break;
 
                 case ParametersEnum.HandleDiameter:
-                    ParametersDict[ParametersEnum.HandleBaseThickness].Current =
-                        (parameter.Current / _handleBaseThicknessOffset) +
+                    ParametersDict[ParametersEnum.HandleBaseThickness].CurrentValue =
+                        (parameter.CurrentValue / _handleBaseThicknessOffset) +
                         (ParametersDict[ParametersEnum.HandleDiameter].
-                            Current / 2);
+                            CurrentValue / 2);
                     ParametersDict[ParametersEnum.HandleBaseThickness].Min =
-                        (parameter.Current / _handleBaseThicknessOffset) +
+                        (parameter.CurrentValue / _handleBaseThicknessOffset) +
                         (ParametersDict[ParametersEnum.HandleDiameter].
-                            Current / 2);
+                            CurrentValue / 2);
                     ParametersDict[ParametersEnum.HandleBaseThickness].Max =
-                        (parameter.Current / _handleBaseThicknessOffset) +
+                        (parameter.CurrentValue / _handleBaseThicknessOffset) +
                         (ParametersDict[ParametersEnum.HandleDiameter].
-                            Current / 2);
+                            CurrentValue / 2);
                     break;
 
                 case ParametersEnum.HandleBaseThickness:

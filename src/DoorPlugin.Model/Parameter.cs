@@ -8,8 +8,8 @@
         /// <summary>
         /// Получает или задает текущее значение параметра.
         /// </summary>
-        // TODO: либо CurrentValue или Value
-        public double Current { get; set; }
+        // TODO: либо CurrentValue или Value (+)
+        public double CurrentValue { get; set; }
 
         /// <summary>
         /// Получает или задает максимальное значение параметра.
@@ -26,7 +26,7 @@
         /// </summary>
         public Parameter()
         {
-            Current = 60;
+            CurrentValue = 60;
             Max = 200;
             Min = 50;
         }
@@ -44,7 +44,7 @@
         {
             Validator.ValidateParameter(current, min, max);
 
-            Current = current;
+            CurrentValue = current;
             Max = max;
             Min = min;
         }

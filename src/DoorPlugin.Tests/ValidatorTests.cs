@@ -7,6 +7,7 @@
     [TestFixture]
     public class ValidatorTests
     {
+        [Description("Положительный тест валидатора.")]
         [TestCase(5.0, 1.0, 10.0)]
         [TestCase(7.5, 5.0, 10.0)]
         [TestCase(300, 10, 5000)]
@@ -21,6 +22,7 @@
                 Validator.ValidateParameter(value, minValue, maxValue));
         }
 
+        [Description("Отрицательный тест валидатора.")]
         [TestCase(5.0, 35.0, 10.0)]
         [TestCase(7.5, -5.0, 10.0)]
         [TestCase(300, 10, 30)]

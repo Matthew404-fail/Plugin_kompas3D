@@ -7,7 +7,8 @@
     [TestFixture]
     public class ParametersTests
     {
-        // TODO: Добавить описания для тестов
+        // TODO: Добавить описания для тестов (+)
+        [Description("Положительный тест присвоения нового значения параметру.")]
         [TestCase(
             ParametersEnum.HandleThickness,
             123,
@@ -40,9 +41,10 @@
             // Assert
             Assert.AreEqual(
                 value,
-                parameters.ParametersDict[parameterType].Current);
+                parameters.ParametersDict[parameterType].CurrentValue);
         }
 
+        [Description("Отрицательный тест присвоения нового значения параметру.")]
         [TestCase(
             ParametersEnum.DoorWidth,
             78,
@@ -74,6 +76,7 @@
                 parameters.CheckParameter(parameterType, parameter, value));
         }
 
+        [Description("Положительный тест проверки текущих значений параметров.")]
         [TestCase(new[]
         {
             ParametersEnum.DoorHeight,
@@ -123,6 +126,8 @@
             }
         }
 
+        [Description("Положительный тест метода расчетов с параметрами,"
+                     + " которые влияют на другие параметры.")]
         [TestCase(
             ParametersEnum.DoorHeight,
             2000,
@@ -177,7 +182,7 @@
 
                 Assert.AreEqual(
                     expectedParameters[step],
-                    currentParameter.Current);
+                    currentParameter.CurrentValue);
                 Assert.AreEqual(
                     expectedParameters[step + 1],
                     currentParameter.Max);
@@ -189,6 +194,8 @@
             }
         }
 
+        [Description("Положительный тест метода расчетов с параметрами,"
+                     + " которые не влияют на другие параметры.")]
         [TestCase(
             ParametersEnum.PeepholeHeight,
             409,
@@ -246,7 +253,8 @@
                 parameters.ChangeParametersRangeValues(parameterType, parameter));
         }
 
-        [TestCase(ParametersEnum.Unexpected, 12,55, 3)]
+        [Description("Отрицательный тест метода расчетов с некорректными параметрами")]
+        [TestCase(ParametersEnum.Unexpected, 12, 55, 3)]
         public void ChangeParametersRangeValues_Parameter_ThrowException(
             ParametersEnum parameterType,
             double currentValue,

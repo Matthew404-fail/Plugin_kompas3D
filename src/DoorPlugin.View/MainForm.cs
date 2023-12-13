@@ -15,7 +15,7 @@
         /// <summary>
         /// Строка обозначающая textBox.
         /// </summary>
-        private readonly string _textBox= "textBox";
+        private readonly string _textBox = "textBox";
 
         /// <summary>
         /// Строка обозначающая rangeLabel.
@@ -141,16 +141,16 @@
         {
             foreach (var item in _parameters.ParametersDict)
             {
-                // TODO: key и value
-                var _key = item.Key;
-                var _value = item.Value;
+                // TODO: key и value (+)
+                var key = item.Key;
+                var value = item.Value;
 
                 try
                 {
-                    _controls[_key][_textBox].Text =
-                        _value.Current.ToString();
-                    _controls[_key][_rangeLabel].Text =
-                        $"от {_value.Min} до {_value.Max}";
+                    _controls[key][_textBox].Text =
+                        value.CurrentValue.ToString();
+                    _controls[key][_rangeLabel].Text =
+                        $"от {value.Min} до {value.Max}";
                 }
                 catch (KeyNotFoundException e)
                 {
@@ -166,10 +166,10 @@
         {
             if (sender is TextBox textBox)
             {
-                string textBoxName = textBox.Name;
-                ParametersEnum parameterType = ParametersEnum.Unexpected;
+                var textBoxName = textBox.Name;
+                var parameterType = ParametersEnum.Unexpected;
 
-                string parameterTypeString =
+                var parameterTypeString =
                     textBoxName.Split('_')[1];
 
                 // Ищет нужный textBox в _controls.
@@ -212,8 +212,6 @@
         /// </summary>
         private void ButtonBuild_Click(object sender, EventArgs e)
         {
-            _builder.CheckOrCreateKompasConnection();
-            _builder.CreateNewDocument();
             _builder.BuildDetail(_parameters.GetParametersCurrentValues());
         }
     }
