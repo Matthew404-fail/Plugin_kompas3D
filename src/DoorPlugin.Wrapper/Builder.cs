@@ -16,6 +16,16 @@
         private readonly Connector _connector = new Connector();
 
         /// <summary>
+        /// Множитель заступа длины ручки на основание.
+        /// </summary>
+        private readonly double _handleRecHeightMultiplier = 0.15;
+
+        /// <summary>
+        /// Множитель заступа ширины ручки на основание.
+        /// </summary>
+        private readonly double _handleRecWidthMultiplier = 2;
+
+        /// <summary>
         /// Словарь текущих значений всех параметров.
         /// </summary>
         public Dictionary<ParametersEnum, double> ParametersDict { get; set; }
@@ -24,7 +34,9 @@
         /// Строит деталь в Компасе.
         /// </summary>
         /// <param name="parametersDict">Словарь текущих значений всех параметров.</param>
-        public void BuildDetail(Dictionary<ParametersEnum, double> parametersDict)
+        public void BuildDetail(
+            Dictionary<ParametersEnum, double> parametersDict,
+            bool isHandleCylinder)
         {
             _connector.ConnectToKompas();
             _connector.CreateDocument3D();
@@ -33,7 +45,16 @@
 
             BuildFoundation();
             BuildBaseHandle();
-            BuildHandle();
+
+            if (isHandleCylinder == true)
+            {
+                BuildCylinderHandle();
+            }
+            else
+            {
+                BuildRectangleHandle();
+            }
+
             BuildPeephole();
         }
 
@@ -84,7 +105,7 @@
         /// <summary>
         /// Строит рукоятку.
         /// </summary>
-        private void BuildHandle()
+        private void BuildCylinderHandle()
         {
             var offsetThicknessEntity = _connector.CreateOffsetPlane(
                 Obj3dType.o3d_planeXOZ,
@@ -97,6 +118,39 @@
                 -ParametersDict[ParametersEnum.HandleHeight],
                 ParametersDict[ParametersEnum.HandleDiameter] / 2,
                 1);
+            sketch.EndEdit();
+
+            _connector.CreateExtrusion(
+                sketch,
+                ParametersDict[ParametersEnum.HandleThickness],
+                false);
+        }
+
+        /// <summary>
+        /// Строит прямоугольную рукоятку.
+        /// </summary>
+        private void BuildRectangleHandle()
+        {
+            var offsetThicknessEntity = _connector.CreateOffsetPlane(
+                Obj3dType.o3d_planeXOZ,
+                ParametersDict[ParametersEnum.HandleBaseThickness]);
+            var sketch = _connector.CreateSketch(Obj3dType.o3d_planeXOZ, offsetThicknessEntity);
+            var document2d = (ksDocument2D)sketch.BeginEdit();
+
+            var x = ParametersDict[ParametersEnum.HandleWidth] +
+                    (ParametersDict[ParametersEnum.HandleRecHeight] *
+                     _handleRecHeightMultiplier);
+            var y = -ParametersDict[ParametersEnum.HandleHeight] +
+                    (ParametersDict[ParametersEnum.HandleRecWidth] /
+                     _handleRecWidthMultiplier);
+
+            var recParams = _connector.RectangleParams(
+                x,
+                y,
+                -ParametersDict[ParametersEnum.HandleRecWidth],
+                -ParametersDict[ParametersEnum.HandleRecHeight]);
+
+            document2d.ksRectangle(recParams);
             sketch.EndEdit();
 
             _connector.CreateExtrusion(

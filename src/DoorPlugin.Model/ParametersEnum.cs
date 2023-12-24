@@ -66,6 +66,16 @@
         HandleThickness,
 
         /// <summary>
+        /// Ширина ручки.
+        /// </summary>
+        HandleRecWidth,
+
+        /// <summary>
+        /// Длина ручки.
+        /// </summary>
+        HandleRecHeight,
+
+        /// <summary>
         /// Некорректный параметр.
         /// </summary>
         Unexpected,

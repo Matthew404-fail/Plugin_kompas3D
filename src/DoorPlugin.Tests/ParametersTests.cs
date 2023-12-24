@@ -76,6 +76,21 @@
                 parameters.CheckParameter(parameterType, parameter, value));
         }
 
+        [Description("Положительный тест IsHandleCylinder.")]
+        [TestCase(true)]
+        [TestCase(false)]
+        public void IsHandleCylinder_SetGetCorrectValue(bool isHandleCylinder)
+        {
+            // Arrange
+            var parameters = new Parameters();
+
+            // ActAssert
+            parameters.IsHandleCylinder = isHandleCylinder;
+
+            // Assert
+            Assert.AreEqual(isHandleCylinder, parameters.IsHandleCylinder);
+        }
+
         [Description("Положительный тест проверки текущих значений параметров.")]
         [TestCase(new[]
         {
@@ -90,7 +105,9 @@
             ParametersEnum.HandleBaseDiameter,
             ParametersEnum.HandleDiameter,
             ParametersEnum.HandleBaseThickness,
-            ParametersEnum.HandleThickness
+            ParametersEnum.HandleThickness,
+            ParametersEnum.HandleRecWidth,
+            ParametersEnum.HandleRecHeight,
         }, new[]
         {
             2000.0,
@@ -104,7 +121,9 @@
             30.0,
             60.0,
             55.0,
-            15.0
+            15.0,
+            45.0,
+            200.0,
         })]
         public void GetParametersCurrentValues_CurrentValuesAreEqual(
             ParametersEnum[] parametersTypes,
@@ -232,6 +251,14 @@
             541,
             387)]
         [TestCase(ParametersEnum.HandleThickness,
+            409,
+            541,
+            387)]
+        [TestCase(ParametersEnum.HandleRecHeight,
+            409,
+            541,
+            387)]
+        [TestCase(ParametersEnum.HandleRecWidth,
             409,
             541,
             387)]

@@ -41,7 +41,12 @@
         /// <summary>
         /// Словарь, тип параметра - параметр.
         /// </summary>
-        public Dictionary<ParametersEnum, Parameter> ParametersDict;
+        public Dictionary<ParametersEnum, Parameter> ParametersDict { get; set; }
+
+        /// <summary>
+        /// Является ли тип ручки цилиндром.
+        /// </summary>
+        public bool IsHandleCylinder { get; set; }
 
         /// <summary>
         /// Инициализирует новый экземпляр класса Parameters со значениями
@@ -62,8 +67,12 @@
                 { ParametersEnum.HandleBaseDiameter, new Parameter(30, 25, 35) },
                 { ParametersEnum.HandleDiameter, new Parameter(60, 50, 80) },
                 { ParametersEnum.HandleBaseThickness, new Parameter(55, 55, 55) },
-                { ParametersEnum.HandleThickness, new Parameter(15, 15, 15) }
+                { ParametersEnum.HandleThickness, new Parameter(15, 15, 15) },
+                { ParametersEnum.HandleRecHeight, new Parameter(200, 180, 250) },
+                { ParametersEnum.HandleRecWidth, new Parameter(45, 30, 60) },
             };
+
+            IsHandleCylinder = true;
         }
 
         /// <summary>
@@ -182,6 +191,8 @@
                 case ParametersEnum.HandleHeight:
                 case ParametersEnum.HandleWidth:
                 case ParametersEnum.HandleBaseDiameter:
+                case ParametersEnum.HandleRecHeight:
+                case ParametersEnum.HandleRecWidth:
                     break;
 
                 default:

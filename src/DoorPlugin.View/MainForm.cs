@@ -55,6 +55,11 @@
             _controls = new Dictionary<ParametersEnum, Dictionary<string, Control>>();
 
         /// <summary>
+        /// Индекс типа цилиндрообразной ручки.
+        /// </summary>
+        private readonly int _cylinderHandleIndex = 0;
+
+        /// <summary>
         /// Инициализирует новый экземпляр класса MainForm.
         /// </summary>
         public MainForm()
@@ -67,6 +72,8 @@
         /// </summary>
         private void MainForm_Load(object sender, EventArgs e)
         {
+            comboBox_HandleType.SelectedIndex = _cylinderHandleIndex;
+
             SetControls();
             SetTextFormElements();
         }
@@ -76,8 +83,9 @@
         /// </summary>
         private void SetControls()
         {
+            _controls.Clear();
             _controls.Add(
-            ParametersEnum.DoorHeight,
+                ParametersEnum.DoorHeight,
                 new Dictionary<string, Control>
                 {
                     { _textBox, textBox_DoorHeight },
@@ -124,14 +132,42 @@
                     { _rangeLabel, label_HandleBaseDiameter },
                     { _errorLabel, label_ErrorHandleBaseDiameter },
                 });
-            _controls.Add(
-                ParametersEnum.HandleDiameter,
-                new Dictionary<string, Control>
-                {
-                    { _textBox, textBox_HandleDiameter },
-                    { _rangeLabel, label_HandleDiameter },
-                    { _errorLabel, label_ErrorHandleDiameter },
-                });
+
+            if (comboBox_HandleType.SelectedIndex == _cylinderHandleIndex)
+            {
+                _controls.Add(
+                    ParametersEnum.HandleDiameter,
+                    new Dictionary<string, Control>
+                    {
+                        { _textBox, textBox_HandleDiameter },
+                        { _rangeLabel, label_HandleDiameter },
+                        { _errorLabel, label_ErrorHandleDiameter },
+                    });
+                _parameters.IsHandleCylinder = true;
+                ChangeHandleControlsVisibility(_parameters.IsHandleCylinder);
+            }
+            else
+            {
+                _controls.Add(
+                    ParametersEnum.HandleRecHeight,
+                    new Dictionary<string, Control>
+                    {
+                        { _textBox, textBox_HandleRecHeight },
+                        { _rangeLabel, label_HandleRecHeight },
+                        { _errorLabel, label_ErrorHandleRecHeight },
+                    });
+                _controls.Add(
+                    ParametersEnum.HandleRecWidth,
+                    new Dictionary<string, Control>
+                    {
+                        { _textBox, textBox_HandleRecWidth },
+                        { _rangeLabel, label_HandleRecWidth },
+                        { _errorLabel, label_ErrorHandleRecWidth },
+                    });
+
+                _parameters.IsHandleCylinder = false;
+                ChangeHandleControlsVisibility(_parameters.IsHandleCylinder);
+            }
         }
 
         /// <summary>
@@ -208,11 +244,64 @@
         }
 
         /// <summary>
+        /// Меняет видимость контролов типа ручки.
+        /// </summary>
+        /// <param name="isCylinder">Является ли ручка цилиндром.</param>
+        private void ChangeHandleControlsVisibility(bool isCylinder)
+        {
+            if (isCylinder == true)
+            {
+                textBox_HandleDiameter.Visible = true;
+                label_NameHandleDiameter.Visible = true;
+                label_HandleDiameter.Visible = true;
+                label_ErrorHandleDiameter.Visible = true;
+
+                label_NameHandleRecHeight.Visible = false;
+                textBox_HandleRecHeight.Visible = false;
+                label_HandleRecHeight.Visible = false;
+                label_ErrorHandleRecHeight.Visible = false;
+
+                label_NameHandleRecWidth.Visible = false;
+                textBox_HandleRecWidth.Visible = false;
+                label_HandleRecWidth.Visible = false;
+                label_ErrorHandleRecWidth.Visible = false;
+            }
+            else
+            {
+                textBox_HandleDiameter.Visible = false;
+                label_NameHandleDiameter.Visible = false;
+                label_HandleDiameter.Visible = false;
+                label_ErrorHandleDiameter.Visible = false;
+
+                label_NameHandleRecHeight.Visible = true;
+                textBox_HandleRecHeight.Visible = true;
+                label_HandleRecHeight.Visible = true;
+                label_ErrorHandleRecHeight.Visible = true;
+
+                label_NameHandleRecWidth.Visible = true;
+                textBox_HandleRecWidth.Visible = true;
+                label_HandleRecWidth.Visible = true;
+                label_ErrorHandleRecWidth.Visible = true;
+            }
+        }
+
+        /// <summary>
         /// Обработчик нажатия кнопки "Построить".
         /// </summary>
         private void ButtonBuild_Click(object sender, EventArgs e)
         {
-            _builder.BuildDetail(_parameters.GetParametersCurrentValues());
+            _builder.BuildDetail(
+                _parameters.GetParametersCurrentValues(),
+                _parameters.IsHandleCylinder);
+        }
+
+        /// <summary>
+        /// Обработчик комбобокса выбора типа ручки.
+        /// </summary>
+        private void ComboBox_HandleType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetControls();
+            SetTextFormElements();
         }
     }
 }
