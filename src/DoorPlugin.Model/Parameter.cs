@@ -8,7 +8,6 @@
         /// <summary>
         /// Получает или задает текущее значение параметра.
         /// </summary>
-        // TODO: либо CurrentValue или Value (+)
         public double CurrentValue { get; set; }
 
         /// <summary>

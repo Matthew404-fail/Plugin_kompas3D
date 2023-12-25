@@ -177,7 +177,6 @@
         {
             foreach (var item in _parameters.ParametersDict)
             {
-                // TODO: key и value (+)
                 var key = item.Key;
                 var value = item.Value;
 
@@ -188,6 +187,7 @@
                     _controls[key][_rangeLabel].Text =
                         $"от {value.Min} до {value.Max}";
                 }
+                // TODO: catch не поймает исключение KeyNotFoundException
                 catch (KeyNotFoundException e)
                 {
                     continue;
