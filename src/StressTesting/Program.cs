@@ -13,27 +13,37 @@
         {
             var builder = new Builder();
             var stopWatch = new Stopwatch();
-            stopWatch.Start();
             var parameters = new Parameters();
             var streamWriter = new StreamWriter($"log.txt", true);
             Process currentProcess = System.Diagnostics.Process.GetCurrentProcess();
             var count = 0;
-            while (count < 200)
+            var totalTime = new TimeSpan();
+
+            while (true)
             {
                 const double gigabyteInByte = 0.000000000931322574615478515625;
+                stopWatch.Start();
+
                 builder.BuildDetail(
                     parameters.GetParametersCurrentValues(),
                     parameters.IsHandleCylinder);
+
+                stopWatch.Stop();
+
                 var computerInfo = new ComputerInfo();
                 var usedMemory = (computerInfo.TotalPhysicalMemory
                                   - computerInfo.AvailablePhysicalMemory)
                                  * gigabyteInByte;
+
+                totalTime += stopWatch.Elapsed;
+
                 streamWriter.WriteLine(
-                    $"{++count}\t{stopWatch.Elapsed:hh\\:mm\\:ss}\t{usedMemory}");
+                    $"{++count}\t{totalTime:hh\\:mm\\:ss}\t{usedMemory}");
                 streamWriter.Flush();
+
+                stopWatch.Reset();
             }
 
-            stopWatch.Stop();
             streamWriter.Close();
             streamWriter.Dispose();
             Console.Write($"End {new ComputerInfo().TotalPhysicalMemory}");
