@@ -17,7 +17,6 @@
             var streamWriter = new StreamWriter($"log.txt", true);
             Process currentProcess = System.Diagnostics.Process.GetCurrentProcess();
             var count = 0;
-            var totalTime = new TimeSpan();
 
             while (true)
             {
@@ -35,10 +34,8 @@
                                   - computerInfo.AvailablePhysicalMemory)
                                  * gigabyteInByte;
 
-                totalTime += stopWatch.Elapsed;
-
                 streamWriter.WriteLine(
-                    $"{++count}\t{totalTime:hh\\:mm\\:ss}\t{usedMemory}");
+                    $"{++count}\t{stopWatch.Elapsed:hh\\:mm\\:ss}\t{usedMemory}");
                 streamWriter.Flush();
 
                 stopWatch.Reset();

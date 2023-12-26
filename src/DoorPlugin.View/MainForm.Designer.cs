@@ -73,145 +73,162 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Высота двери:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 53);
+            this.label2.Location = new System.Drawing.Point(9, 43);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 16);
+            this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ширина двери:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 97);
+            this.label3.Location = new System.Drawing.Point(9, 79);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 16);
+            this.label3.Size = new System.Drawing.Size(89, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Толщина двери:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 182);
+            this.label4.Location = new System.Drawing.Point(9, 148);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 16);
+            this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Диаметр глазка:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 138);
+            this.label6.Location = new System.Drawing.Point(9, 112);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 16);
+            this.label6.Size = new System.Drawing.Size(124, 13);
             this.label6.TabIndex = 3;
             this.label6.Text = "Высота центра глазка:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 226);
+            this.label7.Location = new System.Drawing.Point(8, 184);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(182, 16);
+            this.label7.Size = new System.Drawing.Size(144, 13);
             this.label7.TabIndex = 8;
             this.label7.Text = "Диаметр основания ручки:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(40, 885);
+            this.label10.Location = new System.Drawing.Point(30, 719);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 16);
+            this.label10.Size = new System.Drawing.Size(104, 13);
             this.label10.TabIndex = 11;
             this.label10.Text = "Диаметр ручки Dh:";
             // 
             // label_NameHandleDiameter
             // 
             this.label_NameHandleDiameter.AutoSize = true;
-            this.label_NameHandleDiameter.Location = new System.Drawing.Point(11, 316);
+            this.label_NameHandleDiameter.Location = new System.Drawing.Point(8, 257);
+            this.label_NameHandleDiameter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_NameHandleDiameter.Name = "label_NameHandleDiameter";
-            this.label_NameHandleDiameter.Size = new System.Drawing.Size(109, 16);
+            this.label_NameHandleDiameter.Size = new System.Drawing.Size(87, 13);
             this.label_NameHandleDiameter.TabIndex = 9;
             this.label_NameHandleDiameter.Text = "Диаметр ручки:";
             // 
             // textBox_DoorHeight
             // 
-            this.textBox_DoorHeight.Location = new System.Drawing.Point(227, 6);
+            this.textBox_DoorHeight.Location = new System.Drawing.Point(170, 5);
+            this.textBox_DoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_DoorHeight.Name = "textBox_DoorHeight";
-            this.textBox_DoorHeight.Size = new System.Drawing.Size(133, 22);
-            this.textBox_DoorHeight.TabIndex = 14;
+            this.textBox_DoorHeight.Size = new System.Drawing.Size(101, 20);
+            this.textBox_DoorHeight.TabIndex = 1;
             this.textBox_DoorHeight.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // label_DoorHeight
             // 
             this.label_DoorHeight.AutoSize = true;
-            this.label_DoorHeight.Location = new System.Drawing.Point(366, 9);
+            this.label_DoorHeight.Location = new System.Drawing.Point(274, 7);
+            this.label_DoorHeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_DoorHeight.Name = "label_DoorHeight";
-            this.label_DoorHeight.Size = new System.Drawing.Size(0, 16);
+            this.label_DoorHeight.Size = new System.Drawing.Size(0, 13);
             this.label_DoorHeight.TabIndex = 16;
             // 
             // textBox_DoorWidth
             // 
-            this.textBox_DoorWidth.Location = new System.Drawing.Point(227, 50);
+            this.textBox_DoorWidth.Location = new System.Drawing.Point(170, 41);
+            this.textBox_DoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_DoorWidth.Name = "textBox_DoorWidth";
-            this.textBox_DoorWidth.Size = new System.Drawing.Size(133, 22);
-            this.textBox_DoorWidth.TabIndex = 17;
+            this.textBox_DoorWidth.Size = new System.Drawing.Size(101, 20);
+            this.textBox_DoorWidth.TabIndex = 2;
             this.textBox_DoorWidth.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // textBox_DoorThickness
             // 
-            this.textBox_DoorThickness.Location = new System.Drawing.Point(227, 94);
+            this.textBox_DoorThickness.Location = new System.Drawing.Point(170, 76);
+            this.textBox_DoorThickness.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_DoorThickness.Name = "textBox_DoorThickness";
-            this.textBox_DoorThickness.Size = new System.Drawing.Size(133, 22);
-            this.textBox_DoorThickness.TabIndex = 18;
+            this.textBox_DoorThickness.Size = new System.Drawing.Size(101, 20);
+            this.textBox_DoorThickness.TabIndex = 3;
             this.textBox_DoorThickness.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // textBox_HandleBaseDiameter
             // 
-            this.textBox_HandleBaseDiameter.Location = new System.Drawing.Point(227, 223);
+            this.textBox_HandleBaseDiameter.Location = new System.Drawing.Point(170, 181);
+            this.textBox_HandleBaseDiameter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_HandleBaseDiameter.Name = "textBox_HandleBaseDiameter";
-            this.textBox_HandleBaseDiameter.Size = new System.Drawing.Size(133, 22);
-            this.textBox_HandleBaseDiameter.TabIndex = 19;
+            this.textBox_HandleBaseDiameter.Size = new System.Drawing.Size(101, 20);
+            this.textBox_HandleBaseDiameter.TabIndex = 6;
             this.textBox_HandleBaseDiameter.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // textBox_PeepholeDiameter
             // 
-            this.textBox_PeepholeDiameter.Location = new System.Drawing.Point(227, 179);
+            this.textBox_PeepholeDiameter.Location = new System.Drawing.Point(170, 145);
+            this.textBox_PeepholeDiameter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_PeepholeDiameter.Name = "textBox_PeepholeDiameter";
-            this.textBox_PeepholeDiameter.Size = new System.Drawing.Size(133, 22);
-            this.textBox_PeepholeDiameter.TabIndex = 22;
+            this.textBox_PeepholeDiameter.Size = new System.Drawing.Size(101, 20);
+            this.textBox_PeepholeDiameter.TabIndex = 5;
             this.textBox_PeepholeDiameter.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // textBox_PeepholeHeight
             // 
-            this.textBox_PeepholeHeight.Location = new System.Drawing.Point(227, 135);
+            this.textBox_PeepholeHeight.Location = new System.Drawing.Point(170, 110);
+            this.textBox_PeepholeHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_PeepholeHeight.Name = "textBox_PeepholeHeight";
-            this.textBox_PeepholeHeight.Size = new System.Drawing.Size(133, 22);
-            this.textBox_PeepholeHeight.TabIndex = 24;
+            this.textBox_PeepholeHeight.Size = new System.Drawing.Size(101, 20);
+            this.textBox_PeepholeHeight.TabIndex = 4;
             this.textBox_PeepholeHeight.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // textBox_HandleDiameter
             // 
-            this.textBox_HandleDiameter.Location = new System.Drawing.Point(227, 313);
+            this.textBox_HandleDiameter.Location = new System.Drawing.Point(170, 254);
+            this.textBox_HandleDiameter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_HandleDiameter.Name = "textBox_HandleDiameter";
-            this.textBox_HandleDiameter.Size = new System.Drawing.Size(133, 22);
+            this.textBox_HandleDiameter.Size = new System.Drawing.Size(101, 20);
             this.textBox_HandleDiameter.TabIndex = 30;
             this.textBox_HandleDiameter.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // buttonBuild
             // 
-            this.buttonBuild.Location = new System.Drawing.Point(227, 417);
+            this.buttonBuild.Location = new System.Drawing.Point(170, 339);
+            this.buttonBuild.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuild.Name = "buttonBuild";
-            this.buttonBuild.Size = new System.Drawing.Size(133, 43);
-            this.buttonBuild.TabIndex = 31;
+            this.buttonBuild.Size = new System.Drawing.Size(100, 35);
+            this.buttonBuild.TabIndex = 9;
             this.buttonBuild.Text = "Построить";
             this.buttonBuild.UseVisualStyleBackColor = true;
             this.buttonBuild.Click += new System.EventHandler(this.ButtonBuild_Click);
@@ -219,105 +236,118 @@
             // label_DoorWidth
             // 
             this.label_DoorWidth.AutoSize = true;
-            this.label_DoorWidth.Location = new System.Drawing.Point(366, 53);
+            this.label_DoorWidth.Location = new System.Drawing.Point(274, 43);
+            this.label_DoorWidth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_DoorWidth.Name = "label_DoorWidth";
-            this.label_DoorWidth.Size = new System.Drawing.Size(0, 16);
+            this.label_DoorWidth.Size = new System.Drawing.Size(0, 13);
             this.label_DoorWidth.TabIndex = 32;
             // 
             // label_PeepholeHeight
             // 
             this.label_PeepholeHeight.AutoSize = true;
-            this.label_PeepholeHeight.Location = new System.Drawing.Point(366, 141);
+            this.label_PeepholeHeight.Location = new System.Drawing.Point(274, 115);
+            this.label_PeepholeHeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PeepholeHeight.Name = "label_PeepholeHeight";
-            this.label_PeepholeHeight.Size = new System.Drawing.Size(0, 16);
+            this.label_PeepholeHeight.Size = new System.Drawing.Size(0, 13);
             this.label_PeepholeHeight.TabIndex = 34;
             // 
             // label_DoorThickness
             // 
             this.label_DoorThickness.AutoSize = true;
-            this.label_DoorThickness.Location = new System.Drawing.Point(366, 97);
+            this.label_DoorThickness.Location = new System.Drawing.Point(274, 79);
+            this.label_DoorThickness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_DoorThickness.Name = "label_DoorThickness";
-            this.label_DoorThickness.Size = new System.Drawing.Size(0, 16);
+            this.label_DoorThickness.Size = new System.Drawing.Size(0, 13);
             this.label_DoorThickness.TabIndex = 33;
             // 
             // label_PeepholeDiameter
             // 
             this.label_PeepholeDiameter.AutoSize = true;
-            this.label_PeepholeDiameter.Location = new System.Drawing.Point(366, 182);
+            this.label_PeepholeDiameter.Location = new System.Drawing.Point(274, 148);
+            this.label_PeepholeDiameter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PeepholeDiameter.Name = "label_PeepholeDiameter";
-            this.label_PeepholeDiameter.Size = new System.Drawing.Size(0, 16);
+            this.label_PeepholeDiameter.Size = new System.Drawing.Size(0, 13);
             this.label_PeepholeDiameter.TabIndex = 36;
             // 
             // label_HandleDiameter
             // 
             this.label_HandleDiameter.AutoSize = true;
-            this.label_HandleDiameter.Location = new System.Drawing.Point(365, 316);
+            this.label_HandleDiameter.Location = new System.Drawing.Point(274, 257);
+            this.label_HandleDiameter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_HandleDiameter.Name = "label_HandleDiameter";
-            this.label_HandleDiameter.Size = new System.Drawing.Size(0, 16);
+            this.label_HandleDiameter.Size = new System.Drawing.Size(0, 13);
             this.label_HandleDiameter.TabIndex = 40;
             // 
             // label_HandleBaseDiameter
             // 
             this.label_HandleBaseDiameter.AutoSize = true;
-            this.label_HandleBaseDiameter.Location = new System.Drawing.Point(365, 226);
+            this.label_HandleBaseDiameter.Location = new System.Drawing.Point(274, 184);
+            this.label_HandleBaseDiameter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_HandleBaseDiameter.Name = "label_HandleBaseDiameter";
-            this.label_HandleBaseDiameter.Size = new System.Drawing.Size(0, 16);
+            this.label_HandleBaseDiameter.Size = new System.Drawing.Size(0, 13);
             this.label_HandleBaseDiameter.TabIndex = 39;
             // 
             // label_ErrorDoorHeight
             // 
             this.label_ErrorDoorHeight.AutoSize = true;
-            this.label_ErrorDoorHeight.Location = new System.Drawing.Point(143, 32);
+            this.label_ErrorDoorHeight.Location = new System.Drawing.Point(107, 26);
+            this.label_ErrorDoorHeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ErrorDoorHeight.Name = "label_ErrorDoorHeight";
-            this.label_ErrorDoorHeight.Size = new System.Drawing.Size(0, 16);
+            this.label_ErrorDoorHeight.Size = new System.Drawing.Size(0, 13);
             this.label_ErrorDoorHeight.TabIndex = 43;
             // 
             // label_ErrorDoorWidth
             // 
             this.label_ErrorDoorWidth.AutoSize = true;
-            this.label_ErrorDoorWidth.Location = new System.Drawing.Point(143, 76);
+            this.label_ErrorDoorWidth.Location = new System.Drawing.Point(107, 62);
+            this.label_ErrorDoorWidth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ErrorDoorWidth.Name = "label_ErrorDoorWidth";
-            this.label_ErrorDoorWidth.Size = new System.Drawing.Size(0, 16);
+            this.label_ErrorDoorWidth.Size = new System.Drawing.Size(0, 13);
             this.label_ErrorDoorWidth.TabIndex = 44;
             // 
             // label_ErrorDoorThickness
             // 
             this.label_ErrorDoorThickness.AutoSize = true;
-            this.label_ErrorDoorThickness.Location = new System.Drawing.Point(143, 120);
+            this.label_ErrorDoorThickness.Location = new System.Drawing.Point(107, 98);
+            this.label_ErrorDoorThickness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ErrorDoorThickness.Name = "label_ErrorDoorThickness";
-            this.label_ErrorDoorThickness.Size = new System.Drawing.Size(0, 16);
+            this.label_ErrorDoorThickness.Size = new System.Drawing.Size(0, 13);
             this.label_ErrorDoorThickness.TabIndex = 45;
             // 
             // label_ErrorPeepholeHeight
             // 
             this.label_ErrorPeepholeHeight.AutoSize = true;
-            this.label_ErrorPeepholeHeight.Location = new System.Drawing.Point(143, 161);
+            this.label_ErrorPeepholeHeight.Location = new System.Drawing.Point(107, 131);
+            this.label_ErrorPeepholeHeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ErrorPeepholeHeight.Name = "label_ErrorPeepholeHeight";
-            this.label_ErrorPeepholeHeight.Size = new System.Drawing.Size(0, 16);
+            this.label_ErrorPeepholeHeight.Size = new System.Drawing.Size(0, 13);
             this.label_ErrorPeepholeHeight.TabIndex = 46;
             // 
             // label_ErrorHandleDiameter
             // 
             this.label_ErrorHandleDiameter.AutoSize = true;
-            this.label_ErrorHandleDiameter.Location = new System.Drawing.Point(142, 339);
+            this.label_ErrorHandleDiameter.Location = new System.Drawing.Point(106, 275);
+            this.label_ErrorHandleDiameter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ErrorHandleDiameter.Name = "label_ErrorHandleDiameter";
-            this.label_ErrorHandleDiameter.Size = new System.Drawing.Size(0, 16);
+            this.label_ErrorHandleDiameter.Size = new System.Drawing.Size(0, 13);
             this.label_ErrorHandleDiameter.TabIndex = 52;
             // 
             // label_ErrorHandleBaseDiameter
             // 
             this.label_ErrorHandleBaseDiameter.AutoSize = true;
-            this.label_ErrorHandleBaseDiameter.Location = new System.Drawing.Point(142, 249);
+            this.label_ErrorHandleBaseDiameter.Location = new System.Drawing.Point(106, 202);
+            this.label_ErrorHandleBaseDiameter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ErrorHandleBaseDiameter.Name = "label_ErrorHandleBaseDiameter";
-            this.label_ErrorHandleBaseDiameter.Size = new System.Drawing.Size(0, 16);
+            this.label_ErrorHandleBaseDiameter.Size = new System.Drawing.Size(0, 13);
             this.label_ErrorHandleBaseDiameter.TabIndex = 51;
             // 
             // label_ErrorPeepholeDiameter
             // 
             this.label_ErrorPeepholeDiameter.AutoSize = true;
-            this.label_ErrorPeepholeDiameter.Location = new System.Drawing.Point(143, 205);
+            this.label_ErrorPeepholeDiameter.Location = new System.Drawing.Point(107, 167);
+            this.label_ErrorPeepholeDiameter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ErrorPeepholeDiameter.Name = "label_ErrorPeepholeDiameter";
-            this.label_ErrorPeepholeDiameter.Size = new System.Drawing.Size(0, 16);
+            this.label_ErrorPeepholeDiameter.Size = new System.Drawing.Size(0, 13);
             this.label_ErrorPeepholeDiameter.TabIndex = 48;
             // 
             // comboBox_HandleType
@@ -326,92 +356,102 @@
             this.comboBox_HandleType.Items.AddRange(new object[] {
             "Цилиндр",
             "Прямоугольник"});
-            this.comboBox_HandleType.Location = new System.Drawing.Point(227, 267);
+            this.comboBox_HandleType.Location = new System.Drawing.Point(170, 217);
+            this.comboBox_HandleType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox_HandleType.Name = "comboBox_HandleType";
-            this.comboBox_HandleType.Size = new System.Drawing.Size(133, 24);
+            this.comboBox_HandleType.Size = new System.Drawing.Size(101, 21);
             this.comboBox_HandleType.TabIndex = 53;
             this.comboBox_HandleType.SelectedIndexChanged += new System.EventHandler(this.ComboBox_HandleType_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 270);
+            this.label5.Location = new System.Drawing.Point(9, 219);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 54;
             this.label5.Text = "Тип ручки:";
             // 
             // label_ErrorHandleRecWidth
             // 
             this.label_ErrorHandleRecWidth.AutoSize = true;
-            this.label_ErrorHandleRecWidth.Location = new System.Drawing.Point(142, 383);
+            this.label_ErrorHandleRecWidth.Location = new System.Drawing.Point(106, 311);
+            this.label_ErrorHandleRecWidth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ErrorHandleRecWidth.Name = "label_ErrorHandleRecWidth";
-            this.label_ErrorHandleRecWidth.Size = new System.Drawing.Size(0, 16);
+            this.label_ErrorHandleRecWidth.Size = new System.Drawing.Size(0, 13);
             this.label_ErrorHandleRecWidth.TabIndex = 59;
             // 
             // label_HandleRecWidth
             // 
             this.label_HandleRecWidth.AutoSize = true;
-            this.label_HandleRecWidth.Location = new System.Drawing.Point(365, 360);
+            this.label_HandleRecWidth.Location = new System.Drawing.Point(274, 292);
+            this.label_HandleRecWidth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_HandleRecWidth.Name = "label_HandleRecWidth";
-            this.label_HandleRecWidth.Size = new System.Drawing.Size(0, 16);
+            this.label_HandleRecWidth.Size = new System.Drawing.Size(0, 13);
             this.label_HandleRecWidth.TabIndex = 58;
             // 
             // textBox_HandleRecWidth
             // 
-            this.textBox_HandleRecWidth.Location = new System.Drawing.Point(227, 357);
+            this.textBox_HandleRecWidth.Location = new System.Drawing.Point(170, 290);
+            this.textBox_HandleRecWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_HandleRecWidth.Name = "textBox_HandleRecWidth";
-            this.textBox_HandleRecWidth.Size = new System.Drawing.Size(133, 22);
-            this.textBox_HandleRecWidth.TabIndex = 57;
+            this.textBox_HandleRecWidth.Size = new System.Drawing.Size(101, 20);
+            this.textBox_HandleRecWidth.TabIndex = 8;
             this.textBox_HandleRecWidth.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // label_NameHandleRecWidth
             // 
             this.label_NameHandleRecWidth.AutoSize = true;
-            this.label_NameHandleRecWidth.Location = new System.Drawing.Point(11, 360);
+            this.label_NameHandleRecWidth.Location = new System.Drawing.Point(8, 292);
+            this.label_NameHandleRecWidth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_NameHandleRecWidth.Name = "label_NameHandleRecWidth";
-            this.label_NameHandleRecWidth.Size = new System.Drawing.Size(100, 16);
+            this.label_NameHandleRecWidth.Size = new System.Drawing.Size(77, 13);
             this.label_NameHandleRecWidth.TabIndex = 56;
             this.label_NameHandleRecWidth.Text = "Ширина ручки";
             // 
             // label_ErrorHandleRecHeight
             // 
             this.label_ErrorHandleRecHeight.AutoSize = true;
-            this.label_ErrorHandleRecHeight.Location = new System.Drawing.Point(142, 339);
+            this.label_ErrorHandleRecHeight.Location = new System.Drawing.Point(106, 275);
+            this.label_ErrorHandleRecHeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ErrorHandleRecHeight.Name = "label_ErrorHandleRecHeight";
-            this.label_ErrorHandleRecHeight.Size = new System.Drawing.Size(0, 16);
+            this.label_ErrorHandleRecHeight.Size = new System.Drawing.Size(0, 13);
             this.label_ErrorHandleRecHeight.TabIndex = 63;
             // 
             // label_HandleRecHeight
             // 
             this.label_HandleRecHeight.AutoSize = true;
-            this.label_HandleRecHeight.Location = new System.Drawing.Point(365, 316);
+            this.label_HandleRecHeight.Location = new System.Drawing.Point(274, 257);
+            this.label_HandleRecHeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_HandleRecHeight.Name = "label_HandleRecHeight";
-            this.label_HandleRecHeight.Size = new System.Drawing.Size(0, 16);
+            this.label_HandleRecHeight.Size = new System.Drawing.Size(0, 13);
             this.label_HandleRecHeight.TabIndex = 62;
             // 
             // textBox_HandleRecHeight
             // 
-            this.textBox_HandleRecHeight.Location = new System.Drawing.Point(227, 313);
+            this.textBox_HandleRecHeight.Location = new System.Drawing.Point(170, 254);
+            this.textBox_HandleRecHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_HandleRecHeight.Name = "textBox_HandleRecHeight";
-            this.textBox_HandleRecHeight.Size = new System.Drawing.Size(133, 22);
-            this.textBox_HandleRecHeight.TabIndex = 61;
+            this.textBox_HandleRecHeight.Size = new System.Drawing.Size(101, 20);
+            this.textBox_HandleRecHeight.TabIndex = 7;
             this.textBox_HandleRecHeight.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // label_NameHandleRecHeight
             // 
             this.label_NameHandleRecHeight.AutoSize = true;
-            this.label_NameHandleRecHeight.Location = new System.Drawing.Point(11, 316);
+            this.label_NameHandleRecHeight.Location = new System.Drawing.Point(8, 257);
+            this.label_NameHandleRecHeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_NameHandleRecHeight.Name = "label_NameHandleRecHeight";
-            this.label_NameHandleRecHeight.Size = new System.Drawing.Size(90, 16);
+            this.label_NameHandleRecHeight.Size = new System.Drawing.Size(71, 13);
             this.label_NameHandleRecHeight.TabIndex = 60;
             this.label_NameHandleRecHeight.Text = "Длина ручки";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 472);
+            this.ClientSize = new System.Drawing.Size(431, 384);
             this.Controls.Add(this.label_ErrorHandleRecHeight);
             this.Controls.Add(this.label_HandleRecHeight);
             this.Controls.Add(this.textBox_HandleRecHeight);
@@ -453,6 +493,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
